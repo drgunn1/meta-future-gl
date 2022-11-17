@@ -1,6 +1,6 @@
-i.MX8MP EVK BOARD
-M:	Peng Fan <peng.fan@nxp.com>
+i.MX8MP FUTURE GL BOARD
+M:	Don Gunn <don.gunn@futureelectronics.com>
 S:	Maintained
-F:	board/freescale/imx8mp_evk/
-F:	include/configs/imx8mp_evk.h
-F:	configs/imx8mp_evk_defconfig
+F:	board/future/imx8mp_futuregl/
+F:	include/configs/imx8mp_futuregl.h
+F:	configs/imx8mp_futuregl_defconfig

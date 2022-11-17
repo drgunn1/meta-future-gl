@@ -7,6 +7,22 @@ PROVIDES += "u-boot"
 
 inherit uuu_bootloader_tag
 
+SRC_URI += " \
+	file://imx8mp-futuregl.dts;subdir=git/arch/arm/dts 		\
+	file://imx8mp-futuregl-u-boot.dtsi;subdir=git/arch/arm/dts	\
+	file://imx8mp_futuregl.h;subdir=git/include/configs 		\
+	file://imx8mp_futuregl_defconfig;subdir=git/configs		\
+	file://board/future/imx8mp-futuregl/ddr4_timing.c;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/imx8mp_futuregl.c;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/imximage-8mp-lpddr4.cfg;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/Kconfig;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/lpddr4_timing.c;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/lpddr4_timing_ndm.c;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/MAINTAINERS;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/Makefile;subdir=git/board/future/imx8mp-futuregl/ 	\
+	file://board/future/imx8mp-futuregl/spl.c;subdir=git/board/future/imx8mp-futuregl/ 	\
+"
+
 UUU_BOOTLOADER            = ""
 UUU_BOOTLOADER:mx6-nxp-bsp        = "${UBOOT_BINARY}"
 UUU_BOOTLOADER:mx7-nxp-bsp        = "${UBOOT_BINARY}"
